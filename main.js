@@ -13,10 +13,10 @@ async function weatherDataUpdate(){
     });
 }
 
-//cron.schedule('30 4 * * *', () => {
+cron.schedule('30 4 * * *', () => {
     weatherDataUpdate()
-//},{
- //   scheduled: true,
- //   timezone: "America/Sao_Paulo"
-//});
+},{
+    scheduled: true,
+    timezone: "America/Sao_Paulo"
+});
 
