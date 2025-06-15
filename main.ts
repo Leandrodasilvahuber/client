@@ -9,12 +9,11 @@ class main {
         const connection = new Connection()
         const stormglass = new Stormglass()
         
-        //cron.schedule('0 */6 * * *', () => {
+        cron.schedule('0 */6 * * *', () => {
             this.weatherDataUpdate(connection, stormglass);
-       // }, {
-        //    scheduled: true,
-       //     timezone: "America/Sao_Paulo"
-       // });
+        }, {
+            timezone: "America/Sao_Paulo"
+        });
     }
 
     async weatherDataUpdate(connection: Connection, provider: IProvider){
