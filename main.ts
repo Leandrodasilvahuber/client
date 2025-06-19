@@ -16,7 +16,7 @@ class main {
         });
     }
 
-    async weatherDataUpdate(connection: Connection, provider: IProvider){
+    weatherDataUpdate = async (connection: IConnection, provider: IProvider) => {
         const partials = await provider.getWeather()
         partials.forEach(partial => {
             connection.save(partial)
