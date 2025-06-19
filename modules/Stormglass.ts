@@ -1,5 +1,4 @@
 import axios from 'axios';
-
 export class Stormglass implements IProvider {
 
   async getWeather(): Promise<Array<String>>{

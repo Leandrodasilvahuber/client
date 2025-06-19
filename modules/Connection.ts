@@ -1,4 +1,3 @@
-
 import { MongoClient, ServerApiVersion } from 'mongodb';
 
 export class Connection implements IConnection {
