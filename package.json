@@ -1,26 +1,26 @@
 {
-  "name": "forecast",
-  "version": "1.0.0",
-  "main": "main.js",
-  "scripts": {
-    "start": "tsx main.ts",
-    "build": "tsc",
-    "serve": "node dist/main.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "module",
-  "dependencies": {
-    "axios": "^1.9.0",
-    "dotenv": "^16.5.0",
-    "mongodb": "^6.16.0",
-    "node-cron": "^4.0.7"
-  },
-  "devDependencies": {
-    "@types/node": "^24.0.1",
-    "ts-node": "^10.9.2",
-    "tsx": "^4.20.3",
-    "typescript": "^5.8.3"
-  }
+    "name": "forecast",
+    "version": "1.0.0",
+    "main": "main.js",
+    "scripts": {
+        "start": "tsx main.ts",
+        "build": "tsc",
+        "serve": "node dist/main.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "module",
+    "dependencies": {
+        "axios": "^1.9.0",
+        "dotenv": "^16.5.0",
+        "mongodb": "^6.16.0",
+        "node-cron": "^4.0.7"
+    },
+    "devDependencies": {
+        "@types/node": "^24.0.1",
+        "ts-node": "^10.9.2",
+        "tsx": "^4.20.3",
+        "typescript": "^5.8.3"
+    }
 }
