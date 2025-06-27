@@ -2,7 +2,7 @@ import { MongoClient, ServerApiVersion } from "mongodb";
 
 export class Connection implements IConnection {
     async getClient(): Promise<MongoClient> {
-        const uri = process.env.URI_MONGO;
+        const uri = "mongodb://localhost:27017/";
 
         if (!uri || uri.trim() === "") {
             throw new Error("MongoDB connection URI is not configured");
@@ -38,8 +38,8 @@ export class Connection implements IConnection {
         const client = await this.getClient();
 
         try {
-            const database = client.db(process.env.DB_MONGO);
-            const forecast = database.collection(process.env.TABLE_MONGO || "");
+            const database = client.db("weather");
+            const forecast = database.collection("forecast-florianopolis");
 
             await forecast.updateOne(
                 { time: partial.time },
