@@ -7,16 +7,17 @@ class main {
     constructor() {
         const connection = new Connection();
         const stormglass = new Stormglass();
+        this.weatherDataUpdate(connection, stormglass);
 
-        cron.schedule(
-            "0 */6 * * *",
-            () => {
-                this.weatherDataUpdate(connection, stormglass);
-            },
-            {
-                timezone: "America/Sao_Paulo",
-            }
-        );
+        //cron.schedule(
+        //    "0 */6 * * *",
+        //    () => {
+        //        this.weatherDataUpdate(connection, stormglass);
+        //    },
+        //    {
+        //        timezone: "America/Sao_Paulo",
+        //    }
+        //);
     }
 
     weatherDataUpdate = async (
