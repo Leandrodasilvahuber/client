@@ -5,19 +5,22 @@ import cron from "node-cron";
 dotenv.config();
 class main {
     constructor() {
+        const teste = true;
+
         const connection = new Connection();
         const stormglass = new Stormglass();
-        this.weatherDataUpdate(connection, stormglass);
 
-        //cron.schedule(
-        //    "0 */6 * * *",
-        //    () => {
-        //        this.weatherDataUpdate(connection, stormglass);
-        //    },
-        //    {
-        //        timezone: "America/Sao_Paulo",
-        //    }
-        //);
+        if (teste) {
+            this.weatherDataUpdate(connection, stormglass);
+        } else {
+            cron.schedule(
+                "0 */6 * * *",
+                () => {
+                    this.weatherDataUpdate(connection, stormglass);
+                },
+                { timezone: "America/Sao_Paulo" }
+            );
+        }
     }
 
     weatherDataUpdate = async (

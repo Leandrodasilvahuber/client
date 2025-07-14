@@ -39,7 +39,7 @@ export class Connection implements IConnection {
 
         try {
             const database = client.db("weather");
-            const forecast = database.collection("forecast-florianopolis");
+            const forecast = database.collection("florianopolis");
 
             await forecast.updateOne(
                 { time: partial.time },

@@ -12,7 +12,8 @@ export class Stormglass implements IProvider {
             },
             headers: {
                 Authorization:
-                    "6964df72-3cc5-11f0-976d-0242ac130006-6964dfe0-3cc5-11f0-976d-0242ac130006",
+                    //"6964df72-3cc5-11f0-976d-0242ac130006-6964dfe0-3cc5-11f0-976d-0242ac130006",
+                    "30254624-3d7f-11f0-9ea7-0242ac130006-30254692-3d7f-11f0-9ea7-0242ac130006",
             },
         });
 
