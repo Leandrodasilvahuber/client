@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export class Stormglass implements IProvider {
+export class Stormglass {
     async getWeather(): Promise<Array<String>> {
         const url_api = "https://api.stormglass.io/v2/weather/point";
 

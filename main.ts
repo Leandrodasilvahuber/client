@@ -1,8 +1,6 @@
 import { Connection } from "./modules/Connection.js";
 import { Stormglass } from "./modules/Stormglass.js";
-import dotenv from "dotenv";
 import cron from "node-cron";
-dotenv.config();
 class main {
     constructor() {
         const teste = true;
@@ -24,8 +22,8 @@ class main {
     }
 
     weatherDataUpdate = async (
-        connection: IConnection,
-        provider: IProvider
+        connection: Connection,
+        provider: Stormglass
     ) => {
         const partials = await provider.getWeather();
         partials.forEach((partial) => {

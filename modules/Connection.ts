@@ -1,6 +1,6 @@
 import { MongoClient, ServerApiVersion } from "mongodb";
 
-export class Connection implements IConnection {
+export class Connection {
     async getClient(): Promise<MongoClient> {
         const uri = "mongodb://localhost:27017/";
 
